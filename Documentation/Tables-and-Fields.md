@@ -1,13 +1,32 @@
 # Tables and Fields
 
-The Slot Booking and Availability Management System uses custom tables to manage slots and booking requests.
+The Slot Booking and Availability Management System uses two custom tables to manage slots and booking requests.
 
 ## Slot Table
 
-Stores information about available slots, including the slot date, time, and availability status.
+The Slot table stores information about the available time slots.
+
+The table contains fields such as:
+
+- Slot Date
+- Start Time
+- End Time
+- Availability
+
+The Availability field is used to identify whether a slot is available or already booked.
 
 ## Booking Table
 
-Stores booking requests made by users and maintains the booking status.
+The Booking table stores the booking requests submitted by users.
 
-The Booking table is linked to the Slot table to identify the slot selected for each booking.
+The table contains fields such as:
+
+- Requester
+- Booking Date
+- Selected Slot
+- Purpose
+- Status
+
+The Selected Slot field is linked to the Slot table so that each booking is associated with a specific slot.
+
+The Booking table is also used to track the current status of each booking, including booking and cancellation details.
